@@ -11,3 +11,9 @@ class User(models.Model):
     telegram_id = models.CharField(db_index=True, max_length=255, unique=True)
     phone_number = models.CharField(validators=[phone_regex], max_length=10, blank=True)
     
+    def __str__(self):
+        return (
+            f"username: {self.telegram_username}\n"
+            f"telegram_id: {self.telegram_id}\n"
+            f"phone number: {self.phone_number}"
+        )
