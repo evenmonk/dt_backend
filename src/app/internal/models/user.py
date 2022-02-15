@@ -17,3 +17,10 @@ class User(models.Model):
             f"telegram_id: {self.telegram_id}\n"
             f"phone number: {self.phone_number}"
         )
+    
+    def to_dict(self):
+        return {
+            "telegram_username": self.telegram_username,
+            "telegram_id": self.telegram_id,
+            "phone_number": self.phone_number,
+        }

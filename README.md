@@ -16,3 +16,8 @@ register user
 set phone number  
 - /me     
 get user info
+
+### Endpoints
+- api/me
+shows information about user
+Example: `/api/me/?username=<your_username>`
